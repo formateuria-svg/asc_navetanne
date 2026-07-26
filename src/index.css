@@ -1,0 +1,61 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Sora:wght@300;400;500;600;700;800&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+:root {
+  --tg-green: #0B6E4F;
+  --tg-yellow: #FFC72C;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Sora', sans-serif;
+  background-color: #FBFAF5;
+  color: #0A0F0D;
+  -webkit-font-smoothing: antialiased;
+}
+::selection {
+  background: #FFC72C;
+  color: #0A0F0D;
+}
+.font-display {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.01em;
+}
+/* Diagonal stripe motif */
+.tg-diagonal {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 199, 44, 0.12) 0px,
+    rgba(255, 199, 44, 0.12) 2px,
+    transparent 2px,
+    transparent 14px
+  );
+}
+.tg-scrim {
+  background: linear-gradient(180deg, rgba(10,15,13,0) 0%, rgba(10,15,13,0.35) 45%, rgba(10,15,13,0.92) 100%);
+}
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #F4F1E9; }
+::-webkit-scrollbar-thumb { background: #0B6E4F; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #064635; }
+.tg-outline-text {
+  -webkit-text-stroke: 1.5px #0A0F0D;
+  color: transparent;
+}
+.tg-card-hover {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+}
+.tg-card-hover:hover {
+  transform: translateY(-6px);
+}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
